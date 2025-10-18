@@ -1,0 +1,11 @@
+# Service to start a maintenance task
+string task_id              # Task identifier
+string task_type            # Type of maintenance task
+geometry_msgs/Pose target_location # Target location
+string[] required_equipment # Required equipment
+string priority             # Task priority
+---
+bool success                # Whether task was started successfully
+string message              # Response message
+string assigned_robot       # Robot assigned to task
+time estimated_completion   # Estimated completion time

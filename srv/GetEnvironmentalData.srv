@@ -1,0 +1,10 @@
+# Service to get environmental data
+string zone_id              # Zone to get data for (empty for all zones)
+time start_time             # Start time for data range
+time end_time               # End time for data range
+bool include_history        # Whether to include historical data
+---
+bool success                # Whether request was successful
+string message              # Response message
+lunar_habitat_robot/EnvironmentalData[] data # Environmental data
+int32 data_count            # Number of data points returned

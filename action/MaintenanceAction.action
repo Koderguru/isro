@@ -1,0 +1,25 @@
+# Action for maintenance tasks
+# Goal
+string task_id              # Task identifier
+string task_type            # Type of maintenance task
+geometry_msgs/Pose target_pose # Target location
+string[] required_tools     # Required tools
+string[] safety_protocols   # Safety protocols to follow
+float32 timeout_duration    # Task timeout duration
+---
+# Result
+bool success                # Whether maintenance completed successfully
+string message              # Result message
+string[] findings           # Maintenance findings
+string[] recommendations    # Maintenance recommendations
+bool requires_followup      # Whether follow-up is needed
+string followup_notes       # Follow-up notes
+float32 task_duration       # Actual task duration
+---
+# Feedback
+string current_step         # Current maintenance step
+float32 progress            # Progress percentage (0-100)
+string status_message       # Current status message
+geometry_msgs/Pose current_pose # Current robot pose
+string[] active_tools       # Currently active tools
+time estimated_completion   # Estimated completion time

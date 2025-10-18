@@ -1,0 +1,22 @@
+# Action for autonomous patrol missions
+# Goal
+string patrol_id            # Unique patrol identifier
+string[] patrol_zones       # Zones to patrol
+float32 patrol_speed        # Patrol speed
+bool continuous_patrol      # Whether to continuously patrol
+int32 patrol_cycles         # Number of patrol cycles (-1 for infinite)
+---
+# Result
+bool success                # Whether patrol completed successfully
+string message              # Result message
+float32 total_distance      # Total distance traveled
+float32 patrol_duration     # Total patrol duration
+int32 zones_visited         # Number of zones visited
+string[] hazards_detected   # Hazards detected during patrol
+---
+# Feedback
+string current_zone         # Current patrol zone
+float32 progress            # Progress percentage (0-100)
+geometry_msgs/Pose current_pose # Current robot pose
+string[] recent_findings    # Recent findings during patrol
+time estimated_completion   # Estimated completion time

@@ -1,0 +1,11 @@
+# Service to set navigation goal
+geometry_msgs/PoseStamped goal_pose # Target pose
+string goal_type            # Goal type: "patrol", "maintenance", "emergency", "manual"
+float32 max_velocity        # Maximum velocity (0 for default)
+bool avoid_obstacles        # Whether to avoid obstacles
+string[] priority_zones     # Priority zones to visit
+---
+bool success                # Whether goal was set successfully
+string message              # Response message
+nav_msgs/Path planned_path  # Planned path to goal
+float32 estimated_duration  # Estimated time to reach goal
